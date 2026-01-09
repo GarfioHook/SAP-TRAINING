@@ -97,7 +97,7 @@ function App() {
           </div>
           <h1 className="text-2xl font-bold text-slate-900 mb-2 pt-4">Monitor de Flujos SAP</h1>
           <p className="text-slate-500 py-10 mb-6 text-sm leading-relaxed border-y border-slate-50">
-            Ingrese su nombre y seleccione su departamento para comenzar la simulación.
+            Ingrese su nombre y seleccione su departamento.
           </p>
 
           <div className="space-y-6 text-left">
@@ -112,7 +112,7 @@ function App() {
               />
             </div>
             <div className="pt-4">
-              <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-2">Elija un ROL para ingresar</label>
+              <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-2">Elija un ROL para ver sus Flujos</label>
 
               <div className="space-y-3">
                 {TEAMS.map((team) => (
