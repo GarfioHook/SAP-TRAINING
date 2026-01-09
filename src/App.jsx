@@ -91,9 +91,9 @@ function App() {
       <div className="min-h-screen bg-white flex flex-col items-center justify-center p-6 bg-slate-50">
         <div className="w-full max-w-md bg-white p-8 rounded-2xl border border-slate-200 shadow-xl fade-in">
           <div className="flex items-center justify-start gap-4 mb-10">
-            <img src="/grupo-portland-logo.png" alt="Grupo Portland" className="h-8 w-auto" />
+            <img src="grupo-portland-logo.png" alt="Grupo Portland" className="h-8 w-auto" />
             <div className="h-4 w-px bg-slate-200" />
-            <img src="/sap-project-logo.png" alt="Proyecto SAP S/4HANA" className="h-6 w-auto" />
+            <img src="sap-project-logo.png" alt="Proyecto SAP S/4HANA" className="h-6 w-auto" />
           </div>
           <h1 className="text-2xl font-bold text-slate-900 mb-2 pt-4">Monitor de Flujos SAP</h1>
           <p className="text-slate-500 py-10 mb-6 text-sm leading-relaxed border-y border-slate-50">
