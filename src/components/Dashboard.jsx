@@ -5,7 +5,11 @@ import { WORKFLOW_STEPS } from '../lib/constants'
 function Dashboard({ cycles, loading, demoMode, userName, userArea, onNewCycle, onLogout, onUpdateDocument }) {
     const myPendingTasks = cycles.filter(c => {
         const stepData = c.current_step < 7 ? WORKFLOW_STEPS[c.current_step] : null
-        return stepData?.team === userArea
+        if (!stepData) return false
+
+        // Handle both single team or array of teams
+        const allowedTeams = Array.isArray(stepData.team) ? stepData.team : [stepData.team]
+        return allowedTeams.includes(userArea)
     }).length
 
     const completedCycles = cycles.filter(c => c.current_step >= 7).length

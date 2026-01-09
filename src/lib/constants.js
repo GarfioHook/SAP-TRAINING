@@ -7,7 +7,7 @@ export const WORKFLOW_STEPS = [
         documentKey: 'po_number',
         documentLabel: 'EBELN',
         buttonLabel: 'Registrar Pedido de Compra',
-        team: 'COMEX',
+        team: ['COMEX', 'Comercial'],
         teamColor: '#002e5d', // Navy
         inputType: 'text',
         placeholder: '45XXXXXXXX',

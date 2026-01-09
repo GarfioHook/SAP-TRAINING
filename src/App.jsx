@@ -112,7 +112,7 @@ function App() {
               />
             </div>
             <div className="pt-4">
-              <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-2">Elija un ROL para ver sus Flujos</label>
+              <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-2">Elija un ROL para ingresar</label>
 
               <div className="space-y-3">
                 {TEAMS.map((team) => (

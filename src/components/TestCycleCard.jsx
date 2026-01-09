@@ -10,7 +10,14 @@ function TestCycleCard({ cycle, userArea, onUpdateDocument }) {
     const currentStepData = WORKFLOW_STEPS[cycle.current_step]
     const isCompleted = cycle.current_step >= 7
 
-    const canEdit = !isCompleted && (currentStepData?.team === userArea || userArea === 'Administrador')
+    // Support multi-team step ownership
+    const allowedTeams = currentStepData ? (Array.isArray(currentStepData.team) ? currentStepData.team : [currentStepData.team]) : []
+    const canEdit = !isCompleted && (allowedTeams.includes(userArea) || userArea === 'Administrador')
+
+    const formatTeamDisplay = (team) => {
+        if (Array.isArray(team)) return team.join(' / ')
+        return team
+    }
 
     // Bulletproof function to render values that might be objects (fixes React Error #31)
     const renderSafeValue = (val) => {
@@ -102,7 +109,7 @@ function TestCycleCard({ cycle, userArea, onUpdateDocument }) {
                             <span className={`text-[11px] font-bold uppercase tracking-tight ${canEdit ? 'text-amber-700' : 'text-slate-400'
                                 }`}>
                                 {canEdit ? 'Tu turno: ' : 'En espera: '}
-                                {renderSafeValue(currentStepData?.team)}
+                                {formatTeamDisplay(currentStepData?.team)}
                             </span>
                         </div>
                         {canEdit && (
@@ -157,7 +164,7 @@ function TestCycleCard({ cycle, userArea, onUpdateDocument }) {
                                 <Lock className="w-5 h-5 text-slate-300" />
                             </div>
                             <p className="text-xs font-semibold text-slate-500 italic">
-                                Acceso restringido. Solo el área de {renderSafeValue(currentStepData?.team)} puede realizar este registro.
+                                Acceso restringido. Solo el área de {formatTeamDisplay(currentStepData?.team)} puede realizar este registro.
                             </p>
                         </div>
                     )}

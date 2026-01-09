@@ -82,7 +82,7 @@ function DocumentInput({ step, onSubmit }) {
             </button>
 
             <p className="text-[10px] text-center text-slate-400 font-semibold uppercase tracking-widest">
-                Acción requerida para: {step.team}
+                Acción requerida para: {Array.isArray(step.team) ? step.team.join(' / ') : step.team}
             </p>
         </form>
     )
