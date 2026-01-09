@@ -20,7 +20,7 @@ function NewCycleModal({ onClose, onSubmit }) {
             <div className="bg-white w-full max-w-lg rounded-2xl shadow-2xl overflow-hidden fade-in border border-slate-200">
                 <div className="bg-blue-900 px-6 py-4 flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                        <img src="/grupo-portland-logo.png" alt="Portland" className="h-5 w-auto brightness-0 invert" />
+                        <img src="grupo-portland-logo.png" alt="Portland" className="h-5 w-auto brightness-0 invert" />
                         <h2 className="text-white font-bold text-sm tracking-tight border-l border-white/20 pl-3">Nuevo Ciclo SAP</h2>
                     </div>
                     <button onClick={onClose} className="p-1 hover:bg-white/10 rounded-full text-white/60 hover:text-white">

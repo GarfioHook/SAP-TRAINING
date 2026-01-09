@@ -16,9 +16,9 @@ function Dashboard({ cycles, loading, demoMode, userName, userArea, onNewCycle, 
             <nav className="glass-header px-6 py-4">
                 <div className="max-w-7xl mx-auto flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                        <img src="/grupo-portland-logo.png" alt="Grupo Portland" className="h-7 w-auto" />
+                        <img src="grupo-portland-logo.png" alt="Grupo Portland" className="h-7 w-auto" />
                         <div className="h-4 w-px bg-slate-200" />
-                        <img src="/sap-project-logo.png" alt="Proyecto SAP S/4HANA" className="h-6 w-auto" />
+                        <img src="sap-project-logo.png" alt="Proyecto SAP S/4HANA" className="h-6 w-auto" />
                     </div>
 
                     <div className="flex items-center gap-6">
